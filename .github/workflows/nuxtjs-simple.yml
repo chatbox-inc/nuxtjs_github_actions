@@ -1,0 +1,15 @@
+name: Nuxtjs Simple
+
+on: [push]
+
+jobs:
+  laravel-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Dependencies
+      run: |
+        npm ci
+    - name: Execute tests
+      run: |
+        npm run test
